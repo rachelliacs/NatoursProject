@@ -15,7 +15,9 @@
 <body>
     <div class="navigation">
         <input type="checkbox" id="navi-toggle" class="navigation__checkbox">
-        <label for="navi-toggle" class="navigation__button">Menu</label>
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
         <div class="navigation__background">&nbsp;</div>
         <nav class="navigation__nav">
             <ul class="navigation__list">
@@ -27,6 +29,7 @@
             </ul>
         </nav>
     </div>
+
     <header class="header">
         <div class="header__logo-box">
             <img src="img/logo-white.png" alt="Logo image" class="header__logo">
@@ -102,7 +105,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h1 class="heading-secondary">
                     Most Popular Tours
@@ -134,7 +137,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$297</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -164,7 +167,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$497</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -194,7 +197,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">$897</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book Now!</a>
+                                <a href="#popup" class="btn btn--white">Book Now!</a>
                             </div>
                         </div>
                     </div>
@@ -298,7 +301,7 @@
         <div class="row">
             <div class="col-1-of-2">
                 <div class="footer__navigation">
-                    <ul class="footer__list u-margin-top-small">
+                    <ul class="footer__list">
                         <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
                         <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
                         <li class="footer__item"><a href="#" class="footer__link">Career</a></li>
@@ -314,5 +317,24 @@
             </div>
         </div>
     </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/Nat8.jpeg" alt="Tour Photo" class="popup__img">
+                <img src="img/Nat9.jpeg" alt="Tour Photo" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a class="popup__close" href="#section-tours">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-small">Start Booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; please these term before booking.</h3>
+                <p class="popup__text u-margin-bottom-medium">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor facere quia optio atque ut? Totam, vitae. Iure error quisquam, beatae distinctio unde pariatur quibusdam velit animi assumenda nihil, laborum sit!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus pariatur neque consequuntur, numquam tempora maxime quae voluptate similique sint a sit quod, incidunt sed reiciendis dolor accusamus atque cumque. Labore.
+                </p>
+                <a href="#" class="btn btn--green">Book Now</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
