@@ -3,8 +3,19 @@
     // background-color: #eee;
     max-width: $grid-width;
     margin: 0 auto;
+    @include respondsive (tab-port) {
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+    @include respondsive (phone) {
+        max-width: 50rem;
+        margin: 0 auto;
+    }
     &:not(:last-child){
         margin-bottom: $gutter-vertical;
+        @include respondsive (tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
     }
 
     @include clearfix;
@@ -12,8 +23,19 @@
     [class^="col-"] {
         // background-color: orangered;
         float: left;
+        @include respondsive (tab-port) {
+            float: none;
+            margin: 0 auto;
+        }
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+            @include respondsive (tab-port) {
+                margin: 0 auto;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+        @include respondsive (tab-port) {
+            width: 100% !important;
         }
     }
 

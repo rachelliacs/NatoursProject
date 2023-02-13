@@ -6,7 +6,33 @@
     padding: 0;
     box-sizing: inherit;
 }
-
+// By default 1rem = 16px
 html {
-    font-size: 62.5%;
+    // Define what 1rem is
+    font-size: 62.5%;               // 1rem = 10px (10px/16px)
+    @include respondsive (tab-land) {
+        font-size: 56.25%;          // 1rem = 9px (9px/16px)
+    }
+    @include respondsive (tab-port) {
+        font-size: 50%;             // 1rem = 8px (8px/16px)
+    }
+    @include respondsive (phone) {
+        font-size: 31.25%;          // 1rem = 5px (5px/16px)
+    }
+    @include respondsive (big-desk) {
+        font-size: 75%;             // 1rem = 12px (12px/16px)
+    }
+}
+
+body {
+    padding: 3rem;
+    @include respondsive (phone) {
+        padding: 0;
+    }
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
 }

@@ -7,11 +7,16 @@
         height: 7rem;
         background-color: $color-white;
         border-radius: 50%;
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
         text-align: center;
         position: fixed;
         top: 6rem;
         right: 6rem;
-        z-index: 30;
+        z-index: 50;
+        @include respondsive (phone) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
     &__background {
         width: 6.5rem;
@@ -21,16 +26,19 @@
         position: fixed;
         top: 6.25rem;
         right: 6.25rem;
-        z-index: 10;
-
+        z-index: 30;
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
+        @include respondsive (phone) {
+            top: 3.25rem;
+            right: 3.25rem;
+        }
     }
     &__nav {
         height: 100vh;
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 20;
+        z-index: 40;
 
         opacity: 0;
         width: 0;

@@ -1,14 +1,24 @@
 .story {
-    padding: 6rem;
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
     background-color: rgba($color-white, .6);
     border-radius: 3px;
     font-size: $default-font-size;
+    padding: 6rem;
     padding-left: 9rem;
     transform: skewX(-12deg);
-
+    @include respondsive(tab-port) {
+        margin: 0 0 0 -10rem;
+        width: 135%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+    @include respondsive(phone) {
+        margin: 0 0 0 -9rem;
+        width: 135%;
+        transform: skewX(0);
+    }
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -20,6 +30,17 @@
         shape-outside: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        border-radius: 50%;
+        @include respondsive(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
+        @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
     }
 
     &__img {
@@ -30,6 +51,9 @@
 
     &__text {
         transform: skewX(12deg);
+        @include respondsive(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900">
 
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/icon-fonts.css">
+    <!-- <link rel="stylesheet" href="css/icon-fonts.css"> -->
     <link rel="shortcut icon" href="image/png" type="img/logo.jpeg">
     <title>Notours | Exciting tours for adventurous people</title>
 </head>
@@ -52,7 +52,7 @@
                     Exciting tours for adventurous people
                 </h1>
             </div>
-            <div class="row">
+            <div class="row u-margin-bottom-big">
                 <div class="col-1-of-2">
                     <h1 class="heading-tertiary u-margin-bottom-small">You are going to fall in love with nature</h1>
                     <p class="paragraph">
@@ -66,9 +66,24 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/Nat1.jpeg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                        <img src="img/Nat2.jpeg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/Nat3.jpeg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        <img
+                            srcset="img/Nat1.jpeg 300w, img/Nat1-large.jpeg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            src="img/Nat1.jpeg"
+                            alt="Photo 1"
+                            class="composition__photo composition__photo--p1">
+                        <img
+                            srcset="img/Nat2.jpeg 300w, img/Nat2-large.jpeg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            src="img/Nat2.jpeg"
+                            alt="Photo 2"
+                            class="composition__photo composition__photo--p2">
+                        <img
+                            srcset="img/Nat3.jpeg 300w, img/Nat3-large.jpeg 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            src="img/Nat3.jpeg"
+                            alt="Photo 3"
+                            class="composition__photo composition__photo--p3">
                     </div>
                 </div>
             </div>
@@ -203,7 +218,7 @@
                     </div>
                 </div>
             </div>
-            <div class="u-center-text u-margin-bottom-big">
+            <div class="u-center-text">
                 <a href="#" class="btn btn--green">Discover All Tours</a>
             </div>
         </section>
@@ -296,7 +311,10 @@
 
     <footer class="footer">
         <div class="footer__logo-box u-margin-bottom-big">
-            <img src="img/logo-bottomtitle.png" alt="Logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-sidetitle.jpeg 1x, img/logo-sidetitle.png 2x" media="(max-width: 37.5em)">
+                <img alt="Logo" srcset="img/logo-bottomtitle.jpeg 1x, img/logo-bottomtitle.png 2x">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -312,7 +330,7 @@
             </div>
             <div class="col-1-of-2">
                 <div class="footer__copyright">
-                    <p class="u-margin-top-small">Built my <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!</p>
+                    <p class="u-margin-top-small">Built by <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!</p>
                 </div>
             </div>
         </div>

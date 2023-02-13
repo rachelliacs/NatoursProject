@@ -5,3 +5,36 @@
         clear: both;
     }
 }
+
+/* 
+0       - 600       = Phone                                 phone
+600     - 900       = Tablet Potrait                        tab-port
+900     - 1200      = Tablet Landscape                      tab-land
+[1200   - 1800]     = Our normal style will applied here    
+1800    +           = Big Destop                            big-desk
+*/
+
+// 1em = 16px
+
+@mixin respondsive ($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) {     // 600px/16px
+            @content
+        };
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) {     // 900px/16px
+            @content
+        };
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) {    // 1200px/16px
+            @content
+        };
+    }
+    @if $breakpoint == big-desk {
+        @media only screen and (min-width: 112.5em) {    // 1800px/16px
+            @content
+        };
+    }
+}
